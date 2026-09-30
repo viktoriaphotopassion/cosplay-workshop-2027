@@ -339,7 +339,7 @@
 <section>
   <div class="keret rolam-racs">
     <div class="boltiv">
-      <img src="kepek/viki.jpg" alt="Ambrus Viktória fotós, kezében a fényképezőgépével" width="900" height="1350">
+      <img src="viki.jpg" alt="Ambrus Viktória fotós, kezében a fényképezőgépével" width="900" height="1350">
     </div>
     <div class="szuk">
       <h2>Szia, Viki vagyok</h2>
@@ -368,7 +368,7 @@
         <div class="ar-info">2027. július 1-től</div>
       </div>
       <div class="ar">
-        <div class="ar-nev">Foglaló</div>
+        <div class="ar-nev">Előleg</div>
         <div class="osszeg">30 000 Ft</div>
         <div class="ar-info">ezzel biztosíthatod a helyed</div>
       </div>
@@ -378,17 +378,17 @@
       <div>
         <h3>Így foglalhatsz</h3>
         <ol class="lepesek">
-          <li>Kitöltöd lent az űrlapot, és megadod, hogy foglalót vagy a teljes összeget fizetnéd.</li>
+          <li>Kitöltöd lent az űrlapot, és megadod, hogy előleget vagy a teljes összeget fizetnéd.</li>
           <li>E-mailben elküldöm a számlát.</li>
           <li>Amint megérkezik az utalás, a helyed a tiéd.</li>
         </ol>
-        <p>Foglaló esetén a fennmaradó összeget a workshop napján, kezdés előtt, készpénzben rendezheted.</p>
+        <p>Előleg esetén a fennmaradó összeget a workshop napján, kezdés előtt, készpénzben rendezheted.</p>
       </div>
       <div>
         <h3>Lemondási feltételek</h3>
         <ul class="feltetelek">
-          <li><strong>7 napnál korábban</strong><span>díjmentes lemondás</span></li>
-          <li><strong>7 napon belül</strong><span>30 000 Ft fizetendő</span></li>
+          <li><strong>3 hétnél korábban</strong><span>díjmentes lemondás, a befizetett összeget teljes egészében visszautalom</span></li>
+          <li><strong>3 héten belül</strong><span>30 000 Ft lemondási díj fizetendő</span></li>
           <li><strong>48 órán belül</strong><span>a teljes részvételi díj fizetendő</span></li>
         </ul>
         <p style="margin-top:1rem">A workshop legalább 4 fő jelentkezése esetén indul. Ha nem jön össze a létszám, a befizetett összeget teljes egészében visszautalom.</p>
@@ -438,9 +438,9 @@
         </div>
       </fieldset>
       <fieldset class="mezo teljes">
-        <legend>Foglalót vagy teljes összeget fizetnél előre? <span class="kotelezo">*</span></legend>
+        <legend>Előleget vagy teljes összeget fizetnél előre? <span class="kotelezo">*</span></legend>
         <div class="valasztok">
-          <label class="valaszto"><input type="radio" name="fizetes" value="Foglaló (30 000 Ft)" required><span>Foglaló (30 000 Ft)</span></label>
+          <label class="valaszto"><input type="radio" name="fizetes" value="Előleg (30 000 Ft)" required><span>Előleg (30 000 Ft)</span></label>
           <label class="valaszto"><input type="radio" name="fizetes" value="Teljes összeg"><span>Teljes összeg</span></label>
         </div>
       </fieldset>
@@ -531,7 +531,7 @@
     }
     if (!f.email.checkValidity()) return mutatHibat("Az e-mail cím formátuma nem jó, nézd meg még egyszer.", f.email);
     if (f.email.value.trim().toLowerCase() !== f.email2.value.trim().toLowerCase()) return mutatHibat("A két e-mail cím nem egyezik.", f.email2);
-    if (!urlap.querySelector('input[name="fizetes"]:checked')) return mutatHibat("Válaszd ki, hogy foglalót vagy teljes összeget fizetnél.", f.fizetes[0]);
+    if (!urlap.querySelector('input[name="fizetes"]:checked')) return mutatHibat("Válaszd ki, hogy előleget vagy teljes összeget fizetnél.", f.fizetes[0]);
     if (!f.adatkezeles.checked) return mutatHibat("A jelentkezéshez fogadd el az adatkezelési tájékoztatót és a feltételeket.", f.adatkezeles);
 
     if (!MAILERLITE_URL) {
