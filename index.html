@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Morticia cosplay fotós workshop | Viktoria Photo Passion</title>
+<meta name="description" content="Halloweeni cosplay fotós workshop Inannával. 2027. szeptember 25., Budapest, maximum 5 fő. Vakus karaktervilágítás a gyakorlatban.">
+<meta property="og:title" content="Morticia cosplay fotós workshop">
+<meta property="og:description" content="2027. szeptember 25., Budapest, max. 5 fő. Modell: Ipkovics Ági (Inanna).">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕯️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ej: #0D1B2B;          /* a mélykék éjszakai változata, alapháttér */
+    --melykek: #16324F;
+    --lila: #A99BD1;
+    --lila-halvany: #E6E0F3;
+    --szoveg: #D9D3E8;
+    --arany: #E8B923;
+    --turkiz: #3FBFB4;
+    --vonal: rgba(169, 155, 209, 0.28);
+    --display: "Cormorant Garamond", "Georgia", "Times New Roman", serif;
+    --sans: "Poppins", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0;
+    background: var(--ej);
+    color: var(--szoveg);
+    font-family: var(--sans);
+    font-weight: 300;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  img { max-width: 100%; display: block; }
+  a { color: var(--lila-halvany); text-underline-offset: 3px; }
+  a:hover { color: var(--arany); }
+  :focus-visible { outline: 2px solid var(--turkiz); outline-offset: 3px; }
+
+  .keret { width: min(1080px, 100% - 2.5rem); margin-inline: auto; }
+  .szuk { max-width: 64ch; }
+
+  h1, h2, h3 { font-family: var(--display); font-weight: 600; color: var(--lila-halvany); line-height: 1.1; margin: 0; }
+  h2 { font-size: clamp(2.1rem, 4.5vw, 3rem); margin-bottom: 1.25rem; }
+  h3 { font-size: 1.6rem; margin-bottom: 0.75rem; }
+  p { margin: 0 0 1rem; }
+
+  section { padding: clamp(4rem, 9vw, 7rem) 0; }
+  .sav { background: var(--melykek); }
+
+  /* A visszatérő motívum: gótikus boltív keret */
+  .boltiv {
+    border-radius: 999px 999px 4px 4px;
+    overflow: hidden;
+    aspect-ratio: 3 / 4;
+    border: 1px solid var(--vonal);
+    background: radial-gradient(ellipse at 50% 30%, #2A2350 0%, #16213A 60%, #0F1826 100%);
+    position: relative;
+  }
+  .boltiv img { width: 100%; height: 100%; object-fit: cover; }
+  .kephely {
+    position: absolute; inset: 0;
+    display: grid; place-items: center; text-align: center;
+    padding: 1.5rem;
+    color: var(--lila); font-size: 0.85rem; letter-spacing: 0.02em;
+  }
+
+  /* Nyitó */
+  .nyito {
+    padding-bottom: clamp(3rem, 6vw, 4.5rem);
+    padding-top: calc(clamp(3rem, 7vw, 5.5rem) + env(safe-area-inset-top, 0px));
+    background:
+      radial-gradient(circle at 78% 38%, rgba(232, 185, 35, 0.10), transparent 32%),
+      radial-gradient(circle at 10% 15%, rgba(169, 155, 209, 0.08), transparent 35%),
+      var(--ej);
+  }
+  .nyito-racs { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: clamp(2rem, 6vw, 5rem); align-items: center; }
+  .alcim { font-size: 1.05rem; color: var(--lila); margin-bottom: 0.5rem; font-weight: 400; }
+  .nyito h1 {
+    font-size: clamp(4.5rem, 14vw, 9.5rem);
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    line-height: 0.9;
+    margin: 0 0 1.5rem -0.04em;
+  }
+  .nyito .bevezeto { font-size: 1.2rem; max-width: 34ch; color: var(--lila-halvany); }
+  .adatok { display: grid; grid-template-columns: auto 1fr; gap: 0.55rem 1.5rem; margin: 2rem 0 2.25rem; padding: 1.5rem 0; border-top: 1px solid var(--vonal); border-bottom: 1px solid var(--vonal); }
+  .adatok dt { color: var(--lila); font-size: 0.9rem; padding-top: 0.15rem; }
+  .adatok dd { margin: 0; color: var(--lila-halvany); font-weight: 400; }
+  .adatok dd small { display: block; color: var(--szoveg); font-weight: 300; font-size: 0.85rem; }
+
+  .gomb {
+    display: inline-block;
+    background: var(--arany); color: #1B1405;
+    font-family: var(--sans); font-weight: 600; font-size: 1rem;
+    padding: 0.95rem 2.1rem; border-radius: 999px; border: 0;
+    text-decoration: none; cursor: pointer;
+    transition: background-color .2s ease;
+  }
+  .gomb:hover { background: #F3CB45; color: #1B1405; }
+  .gomb-sor { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; }
+  .gomb-megjegyzes { font-size: 0.92rem; color: var(--lila); }
+
+  /* Miről szól */
+  .kerdesek { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; gap: 1.25rem; }
+  .kerdesek li { font-family: var(--display); font-size: clamp(1.45rem, 2.6vw, 1.9rem); line-height: 1.3; color: var(--lila-halvany); padding-left: 1.4rem; border-left: 2px solid var(--arany); }
+  .kerdesek li span { display: block; font-family: var(--sans); font-size: 0.95rem; color: var(--lila); margin-top: 0.3rem; }
+
+  /* Két hasáb */
+  .ket-hasab { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
+  .lista { list-style: none; padding: 0; margin: 0; }
+  .lista li { position: relative; padding: 0.7rem 0 0.7rem 1.75rem; border-bottom: 1px solid var(--vonal); }
+  .lista li::before { content: ""; position: absolute; left: 0.2rem; top: 1.35rem; width: 7px; height: 7px; background: var(--turkiz); transform: rotate(45deg); }
+  .kiemelt-doboz { background: rgba(169, 155, 209, 0.08); border: 1px solid var(--vonal); border-radius: 18px; padding: clamp(1.5rem, 3vw, 2.25rem); }
+
+  /* Galéria */
+  .galeria { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(0.9rem, 2vw, 1.5rem); margin-top: 2.5rem; }
+  .galeria .boltiv:nth-child(3n+2) { transform: translateY(2.5rem); }
+
+  /* Modell */
+  .modell-racs { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+  .helyorzo { color: var(--lila); font-style: italic; border: 1px dashed var(--vonal); border-radius: 12px; padding: 1rem 1.25rem; }
+  .jelmezek { max-width: 720px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem; }
+  .jelmezek figure { margin: 0; }
+  .jelmezek figcaption { font-size: 0.85rem; color: var(--lila); text-align: center; margin-top: 0.5rem; }
+
+  /* Rólam */
+  .rolam-racs { display: grid; grid-template-columns: 0.75fr 1.25fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+  .rolam-racs .boltiv { background: #fff; }
+  .rolam-racs .boltiv img { object-position: 50% 20%; }
+
+  /* Ár */
+  .arak { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0 3rem; }
+  .ar { border: 1px solid var(--vonal); border-radius: 18px; padding: 1.5rem; }
+  .ar.aktualis { border-color: var(--arany); background: rgba(232, 185, 35, 0.07); }
+  .ar.lejart { opacity: 0.55; }
+  .ar.lejart .osszeg { text-decoration: line-through; }
+  .ar-nev { color: var(--lila); font-size: 0.95rem; }
+  .osszeg { font-family: var(--display); font-size: 2.6rem; font-weight: 600; color: var(--lila-halvany); line-height: 1.2; }
+  .ar-info { font-size: 0.9rem; }
+  .jelzes { display: inline-block; font-size: 0.78rem; font-weight: 500; color: #1B1405; background: var(--arany); border-radius: 999px; padding: 0.1rem 0.7rem; margin-bottom: 0.6rem; }
+  .jelzes[hidden] { display: none; }
+  .lepesek { padding-left: 1.3rem; margin: 0 0 1rem; }
+  .lepesek li { margin-bottom: 0.6rem; padding-left: 0.3rem; }
+  .lepesek li::marker { color: var(--arany); font-weight: 600; }
+  .feltetelek { margin: 0; padding: 0; list-style: none; }
+  .feltetelek li { display: grid; grid-template-columns: 11rem 1fr; gap: 1rem; padding: 0.65rem 0; border-bottom: 1px solid var(--vonal); }
+  .feltetelek strong { font-weight: 500; color: var(--lila-halvany); }
+
+  /* Űrlap */
+  .urlap { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem 1.25rem; margin-top: 2rem; }
+  .mezo { display: flex; flex-direction: column; gap: 0.35rem; }
+  .mezo.teljes { grid-column: 1 / -1; }
+  label, legend { font-size: 0.92rem; color: var(--lila-halvany); font-weight: 400; }
+  .kotelezo { color: var(--arany); }
+  input[type="text"], input[type="email"], input[type="tel"], textarea {
+    font: inherit; font-weight: 400; color: var(--lila-halvany);
+    background: rgba(13, 27, 43, 0.6);
+    border: 1px solid var(--vonal); border-radius: 10px;
+    padding: 0.75rem 0.9rem; width: 100%;
+  }
+  input:focus, textarea:focus { border-color: var(--turkiz); outline: none; box-shadow: 0 0 0 3px rgba(63, 191, 180, 0.25); }
+  textarea { min-height: 5.5rem; resize: vertical; }
+  fieldset { border: 0; padding: 0; margin: 0; }
+  .valasztok { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.45rem; }
+  .valaszto input { position: absolute; opacity: 0; pointer-events: none; }
+  .valaszto span {
+    display: inline-block; padding: 0.55rem 1.1rem; border-radius: 999px;
+    border: 1px solid var(--vonal); cursor: pointer; font-size: 0.95rem;
+  }
+  .valaszto input:checked + span { background: var(--lila); color: var(--ej); border-color: var(--lila); font-weight: 500; }
+  .valaszto input:focus-visible + span { outline: 2px solid var(--turkiz); outline-offset: 2px; }
+  .hozzajarulas { display: flex; gap: 0.75rem; align-items: flex-start; font-size: 0.9rem; }
+  .hozzajarulas input { margin-top: 0.35rem; accent-color: var(--turkiz); width: 1.1rem; height: 1.1rem; flex: none; }
+  .uzenet { grid-column: 1 / -1; border-radius: 12px; padding: 1rem 1.25rem; font-weight: 400; }
+  .uzenet.hiba { background: rgba(232, 120, 120, 0.12); border: 1px solid rgba(232, 120, 120, 0.5); color: #F4C7C7; }
+  .uzenet.siker { background: rgba(63, 191, 180, 0.12); border: 1px solid rgba(63, 191, 180, 0.55); color: var(--lila-halvany); }
+  .uzenet[hidden] { display: none; }
+
+  footer { padding: 3rem 0 calc(3rem + env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--vonal); font-size: 0.92rem; }
+  .lab-racs { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
+
+  @media (max-width: 820px) {
+    .nyito-racs, .ket-hasab, .modell-racs, .rolam-racs { grid-template-columns: 1fr; }
+    .nyito-racs .boltiv { width: 100%; max-width: 320px; margin-inline: auto; }
+    .modell-racs > .boltiv, .rolam-racs .boltiv { width: 100%; max-width: 340px; }
+    .arak { grid-template-columns: 1fr; }
+    .urlap { grid-template-columns: 1fr; }
+    .feltetelek li { grid-template-columns: 1fr; gap: 0.2rem; }
+  }
+  @media (max-width: 560px) {
+    .galeria { grid-template-columns: repeat(2, 1fr); }
+    .galeria .boltiv:nth-child(3n+2) { transform: none; }
+    .galeria .boltiv:nth-child(2n) { transform: translateY(1.5rem); }
+    .jelmezek { grid-template-columns: 1fr 1fr; }
+    .adatok { grid-template-columns: 1fr; gap: 0.1rem; }
+    .adatok dd { margin-bottom: 0.7rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NYITÓ -->
+<header class="nyito">
+  <div class="keret nyito-racs">
+    <div>
+      <p class="alcim">Halloweeni cosplay fotós workshop</p>
+      <h1>Morticia</h1>
+      <p class="bevezeto">Egy délután a fényekkel, az árnyékokkal és egy karakterrel, aki egyetlen pillantással uralja a képet.</p>
+
+      <dl class="adatok">
+        <dt>Időpont</dt>
+        <dd>2027. szeptember 25., szombat<small>14:00-18:00</small></dd>
+        <dt>Helyszín</dt>
+        <dd>Budapest<small>A pontos címet a jelentkezés után küldöm.</small></dd>
+        <dt>Létszám</dt>
+        <dd>Maximum 5 fő</dd>
+        <dt>Modell</dt>
+        <dd>Ipkovics Ági (Inanna)</dd>
+        <dt>Vezeti</dt>
+        <dd>Ambrus Viktória, Viktoria Photo Passion</dd>
+      </dl>
+
+      <div class="gomb-sor">
+        <a class="gomb" href="#jelentkezes">Jelentkezem</a>
+        <span class="gomb-megjegyzes" data-early-bird-szoveg>Early bird ár június 30-ig: 60 000 Ft</span>
+      </div>
+    </div>
+
+    <div class="boltiv" role="img" aria-label="Inanna Morticia jelmezben">
+      <!-- CSERÉLD: <img src="kepek/inanna-morticia.jpg" alt="Inanna Morticia Addams jelmezben"> -->
+      <div class="kephely">Inanna Morticia-képe<br>ide kerül</div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- MIRŐL SZÓL -->
+<section>
+  <div class="keret szuk">
+    <h2>Miről szól a workshop?</h2>
+    <p>Morticia Addams nem kiabál. Egy lassú mozdulat, egy félmosoly, és a jelenet az övé. Ezen a délutánon azt keressük, hogyan tudja ugyanezt elmondani a fény.</p>
+    <ul class="kerdesek">
+      <li>Hogyan lesz egy portréból sötét, elegáns, halloweeni hangulatú jelenet?</li>
+      <li>Hogyan mutatja meg a fény egy karakter személyiségét?</li>
+      <li>Hány vaku kell egy filmes, gótikus atmoszférához?<span>Kevesebb, mint gondolnád. Ezt is megmutatom.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- MI VÁR RÁD -->
+<section class="sav">
+  <div class="keret ket-hasab">
+    <div>
+      <h2>Ami vár rád</h2>
+      <ul class="lista">
+        <li>Morticia Addams ihlette cosplay karakter Inannával</li>
+        <li>vakus világítás több felállásban, az egyszerűtől a drámaiig</li>
+        <li>fények, árnyékok, színek és kontrasztok, amik a karaktert szolgálják</li>
+        <li>karakterközpontú beállítás és pózolás</li>
+        <li>sok gyakorlás: mindenki a saját gépével, a saját képeit készíti</li>
+        <li>tippek, hogyan hozd létre ezt a hangulatot a saját fotózásaidon</li>
+      </ul>
+    </div>
+    <div class="kiemelt-doboz">
+      <h3>Nem kattintgatós workshop</h3>
+      <p>Itt nem az a cél, hogy egy kész beállításnál sorban állj, és elkattints pár képet. Együtt rakjuk össze a fényeket, és mindig elmondom, mi miért kerül oda, ahova kerül.</p>
+      <p>Kérdezni ér, kísérletezni is. Öt fővel mindenkire jut idő, és mindenki kipróbálhatja a saját ötleteit is.</p>
+      <p style="margin-bottom:0">A hangulat laza, a tempó emberi. A sötétség csak a képeken lesz.</p>
+    </div>
+  </div>
+
+  <div class="keret">
+    <div class="galeria" aria-label="Ízelítő képek">
+      <!-- CSERÉLD a helyőrzőket képekre: <div class="boltiv"><img src="kepek/..." alt="..."></div> -->
+      <div class="boltiv"><div class="kephely">Kép helye</div></div>
+      <div class="boltiv"><div class="kephely">Kép helye</div></div>
+      <div class="boltiv"><div class="kephely">Kép helye</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MODELL -->
+<section>
+  <div class="keret">
+    <div class="modell-racs">
+      <div class="boltiv">
+        <!-- CSERÉLD: <img src="kepek/inanna.jpg" alt="Ipkovics Ági (Inanna)"> -->
+        <div class="kephely">Inanna portréja<br>ide kerül</div>
+      </div>
+      <div>
+        <h2>A modell: Inanna</h2>
+        <p><strong style="font-weight:500;color:var(--lila-halvany)">Ipkovics Ági</strong> Inanna néven kelti életre a karaktereit.</p>
+        <!-- CSERÉLD a helyőrző bekezdéseket Inanna valódi bemutatkozására -->
+        <p class="helyorzo">Ide jön Inanna bemutatkozása: hány éve cosplayel, kik a kedvenc karakterei, mi a különleges a jelmezeiben.</p>
+        <p class="helyorzo">Ide jönnek az eredményei: versenyek, díjak, helyezések.</p>
+        <p>Instagram: <a href="#" rel="noopener">@inanna_instagram_neve</a> <!-- CSERÉLD: valódi link és név --></p>
+      </div>
+    </div>
+
+    <div class="jelmezek" aria-label="Inanna korábbi jelmezei">
+      <!-- CSERÉLD: kép és a jelmez neve -->
+      <figure><div class="boltiv"><div class="kephely">Jelmezkép</div></div><figcaption>Jelmez neve</figcaption></figure>
+      <figure><div class="boltiv"><div class="kephely">Jelmezkép</div></div><figcaption>Jelmez neve</figcaption></figure>
+      <figure><div class="boltiv"><div class="kephely">Jelmezkép</div></div><figcaption>Jelmez neve</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- KINEK AJÁNLOM -->
+<section class="sav">
+  <div class="keret ket-hasab">
+    <div>
+      <h2>Kinek ajánlom?</h2>
+      <ul class="lista">
+        <li>Ha fotóztál már vakuval, és szeretnéd tudatosabban, kreatívabban használni.</li>
+        <li>Ha érdekel, hogyan lehet fénnyel karaktert és hangulatot építeni.</li>
+        <li>Ha kilépnél a hagyományos portrék világából, és filmes, történetet mesélő képeket készítenél.</li>
+        <li>Ha szereted a halloweent és a gótikus eleganciát, és elkelne pár ütős kép az őszi portfóliódba.</li>
+      </ul>
+    </div>
+    <div>
+      <div class="kiemelt-doboz">
+        <h3>Jó, ha tudod</h3>
+        <p>Teljesen kezdőknek nem ajánlom: a gép alapbeállításait nem vesszük át, a délután a fényekről és a karakterről szól.</p>
+        <p style="margin-bottom:0">Vakukkal dolgozunk, ehhez <strong style="font-weight:500;color:var(--lila-halvany)">Godox kioldóra</strong> lesz szükséged a gépedre. Ha van sajátod, hozd magaddal. Ha nincs, jelezd a jelentkezésnél, és megbeszéljük.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RÓLAM -->
+<section>
+  <div class="keret rolam-racs">
+    <div class="boltiv">
+      <img src="kepek/viki.jpg" alt="Ambrus Viktória fotós, kezében a fényképezőgépével" width="900" height="1350">
+    </div>
+    <div class="szuk">
+      <h2>Szia, Viki vagyok</h2>
+      <p>Viktoria Photo Passion néven fotózom portrékat, esküvőket, rendezvényeket és táncgálákat. Több mint négy éve dolgozom stúdióban, és bevallom, a vakus fényformálás a kedvenc játszóterem.</p>
+      <p>A fotózásaimon mindig oldott a hangulat. Szerintem a legjobb képek akkor születnek, amikor mindenki jól érzi magát a stúdióban. Ezen a délutánon is így lesz, csak most te állsz a gép mögött.</p>
+      <p>Nézz körül a munkáim között: <a href="https://viktoriaphotopassion.com" rel="noopener">viktoriaphotopassion.com</a> és <a href="https://www.instagram.com/viktoriaphotopassion/" rel="noopener">Instagram</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ÁR ÉS FELTÉTELEK -->
+<section class="sav">
+  <div class="keret">
+    <h2>Részvételi díj</h2>
+    <div class="arak">
+      <div class="ar" data-ar="early">
+        <span class="jelzes" hidden>Most ez érvényes</span>
+        <div class="ar-nev">Early bird</div>
+        <div class="osszeg">60 000 Ft</div>
+        <div class="ar-info">2027. június 30-ig jelentkezve</div>
+      </div>
+      <div class="ar" data-ar="normal">
+        <span class="jelzes" hidden>Most ez érvényes</span>
+        <div class="ar-nev">Normál ár</div>
+        <div class="osszeg">70 000 Ft</div>
+        <div class="ar-info">2027. július 1-től</div>
+      </div>
+      <div class="ar">
+        <div class="ar-nev">Foglaló</div>
+        <div class="osszeg">30 000 Ft</div>
+        <div class="ar-info">ezzel biztosíthatod a helyed</div>
+      </div>
+    </div>
+
+    <div class="ket-hasab">
+      <div>
+        <h3>Így foglalhatsz</h3>
+        <ol class="lepesek">
+          <li>Kitöltöd lent az űrlapot, és megadod, hogy foglalót vagy a teljes összeget fizetnéd.</li>
+          <li>E-mailben elküldöm a számlát.</li>
+          <li>Amint megérkezik az utalás, a helyed a tiéd.</li>
+        </ol>
+        <p>Foglaló esetén a fennmaradó összeget a workshop napján, kezdés előtt, készpénzben rendezheted.</p>
+      </div>
+      <div>
+        <h3>Lemondási feltételek</h3>
+        <ul class="feltetelek">
+          <li><strong>7 napnál korábban</strong><span>díjmentes lemondás</span></li>
+          <li><strong>7 napon belül</strong><span>30 000 Ft fizetendő</span></li>
+          <li><strong>48 órán belül</strong><span>a teljes részvételi díj fizetendő</span></li>
+        </ul>
+        <p style="margin-top:1rem">A workshop legalább 4 fő jelentkezése esetén indul. Ha nem jön össze a létszám, a befizetett összeget teljes egészében visszautalom.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JELENTKEZÉS -->
+<section id="jelentkezes">
+  <div class="keret">
+    <div class="szuk">
+      <h2>Jelentkezés</h2>
+      <p>Öt hely van, ezért érdemes nem sokáig gondolkodni. A <span class="kotelezo">*</span> jelölésű mezők kötelezők.</p>
+    </div>
+
+    <form class="urlap" id="urlap" novalidate>
+      <div class="mezo">
+        <label for="nev">Név <span class="kotelezo">*</span></label>
+        <input type="text" id="nev" name="nev" autocomplete="name" required>
+      </div>
+      <div class="mezo">
+        <label for="telefon">Telefonszám <span class="kotelezo">*</span></label>
+        <input type="tel" id="telefon" name="telefon" autocomplete="tel" required>
+      </div>
+      <div class="mezo">
+        <label for="email">E-mail cím <span class="kotelezo">*</span></label>
+        <input type="email" id="email" name="email" autocomplete="email" required>
+      </div>
+      <div class="mezo">
+        <label for="email2">E-mail cím újra <span class="kotelezo">*</span></label>
+        <input type="email" id="email2" name="email2" autocomplete="off" required>
+      </div>
+      <div class="mezo teljes">
+        <label for="szamlazas">Számlázási név és cím <span class="kotelezo">*</span></label>
+        <textarea id="szamlazas" name="szamlazas" autocomplete="street-address" required></textarea>
+      </div>
+      <div class="mezo">
+        <label for="gep">Milyen márkájú fényképezőgépet használsz?</label>
+        <input type="text" id="gep" name="gep" placeholder="pl. Sony, Canon, Nikon">
+      </div>
+      <fieldset class="mezo">
+        <legend>Van Godox kioldód?</legend>
+        <div class="valasztok">
+          <label class="valaszto"><input type="radio" name="godox" value="Igen"><span>Igen</span></label>
+          <label class="valaszto"><input type="radio" name="godox" value="Nem"><span>Nem</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="mezo teljes">
+        <legend>Foglalót vagy teljes összeget fizetnél előre? <span class="kotelezo">*</span></legend>
+        <div class="valasztok">
+          <label class="valaszto"><input type="radio" name="fizetes" value="Foglaló (30 000 Ft)" required><span>Foglaló (30 000 Ft)</span></label>
+          <label class="valaszto"><input type="radio" name="fizetes" value="Teljes összeg"><span>Teljes összeg</span></label>
+        </div>
+      </fieldset>
+      <div class="mezo teljes">
+        <label class="hozzajarulas" for="adatkezeles">
+          <input type="checkbox" id="adatkezeles" name="adatkezeles" required>
+          <span>Elolvastam és elfogadom az <a href="#" rel="noopener">adatkezelési tájékoztatót</a>, valamint a részvételi és lemondási feltételeket. <span class="kotelezo">*</span></span>
+          <!-- CSERÉLD: a # helyére az adatkezelési tájékoztató linkje -->
+        </label>
+      </div>
+
+      <div class="uzenet hiba" id="hiba" role="alert" hidden></div>
+      <div class="uzenet siker" id="siker" role="status" hidden>Köszönöm, megkaptam a jelentkezésed! Hamarosan írok a megadott e-mail címre a számlával és a részletekkel.</div>
+
+      <div class="mezo teljes">
+        <div><button type="submit" class="gomb" id="kuldes">Jelentkezem</button></div>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="keret lab-racs">
+    <span>Kérdésed van? Írj nyugodtan Instagramon: <a href="https://www.instagram.com/viktoriaphotopassion/" rel="noopener">@viktoriaphotopassion</a></span>
+    <span>© 2026 Viktoria Photo Passion</span>
+  </div>
+</footer>
+
+<script>
+  /* ===== BEÁLLÍTÁSOK ===== */
+  // A MailerLite űrlap beküldési címe. Formátuma:
+  // https://assets.mailerlite.com/jsonp/FIOK_ID/forms/URLAP_ID/subscribe
+  const MAILERLITE_URL = "";
+
+  // A MailerLite egyedi mezőinek kulcsai (a MailerLite-ban így kell elnevezni őket).
+  const MEZOK = {
+    nev: "name",
+    email: "email",
+    telefon: "phone",
+    szamlazas: "szamlazasi_adatok",
+    gep: "fenykepezogep",
+    godox: "godox_kioldo",
+    fizetes: "fizetes_modja"
+  };
+
+  const EARLY_BIRD_VEGE = new Date("2027-07-01T00:00:00+02:00");
+
+  /* ===== AKTUÁLIS ÁR KIEMELÉSE ===== */
+  (function () {
+    const early = new Date() < EARLY_BIRD_VEGE;
+    const aktiv = document.querySelector(`[data-ar="${early ? "early" : "normal"}"]`);
+    aktiv.classList.add("aktualis");
+    aktiv.querySelector(".jelzes").hidden = false;
+    if (!early) {
+      document.querySelector('[data-ar="early"]').classList.add("lejart");
+      document.querySelector("[data-early-bird-szoveg]").textContent = "Részvételi díj: 70 000 Ft";
+    }
+  })();
+
+  /* ===== ŰRLAP ===== */
+  const urlap = document.getElementById("urlap");
+  const hiba = document.getElementById("hiba");
+  const siker = document.getElementById("siker");
+  const gomb = document.getElementById("kuldes");
+
+  function mutatHibat(szoveg, mezo) {
+    hiba.textContent = szoveg;
+    hiba.hidden = false;
+    if (mezo) mezo.focus();
+  }
+
+  urlap.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    hiba.hidden = true;
+
+    const f = urlap.elements;
+    const kotelezok = [
+      [f.nev, "Add meg a neved."],
+      [f.telefon, "Add meg a telefonszámod."],
+      [f.email, "Add meg az e-mail címed."],
+      [f.email2, "Írd be újra az e-mail címed."],
+      [f.szamlazas, "Add meg a számlázási nevet és címet."]
+    ];
+    for (const [mezo, uzenet] of kotelezok) {
+      if (!mezo.value.trim()) return mutatHibat(uzenet, mezo);
+    }
+    if (!f.email.checkValidity()) return mutatHibat("Az e-mail cím formátuma nem jó, nézd meg még egyszer.", f.email);
+    if (f.email.value.trim().toLowerCase() !== f.email2.value.trim().toLowerCase()) return mutatHibat("A két e-mail cím nem egyezik.", f.email2);
+    if (!urlap.querySelector('input[name="fizetes"]:checked')) return mutatHibat("Válaszd ki, hogy foglalót vagy teljes összeget fizetnél.", f.fizetes[0]);
+    if (!f.adatkezeles.checked) return mutatHibat("A jelentkezéshez fogadd el az adatkezelési tájékoztatót és a feltételeket.", f.adatkezeles);
+
+    if (!MAILERLITE_URL) {
+      return mutatHibat("Az űrlap még nincs összekötve a MailerLite-tal, ezért most nem tud jelentkezést fogadni.");
+    }
+
+    const adat = new FormData();
+    const ertek = (nev) => {
+      const m = f[nev];
+      if (m instanceof RadioNodeList) return m.value || "";
+      return m.value.trim();
+    };
+    for (const [helyi, ml] of Object.entries(MEZOK)) {
+      adat.append(`fields[${ml}]`, ertek(helyi));
+    }
+    adat.append("ml-submit", "1");
+    adat.append("anticsrf", "true");
+
+    gomb.disabled = true;
+    gomb.textContent = "Küldés...";
+    try {
+      await fetch(MAILERLITE_URL, { method: "POST", body: adat, mode: "no-cors" });
+      urlap.querySelectorAll(".mezo").forEach((m) => (m.hidden = true));
+      siker.hidden = false;
+      siker.scrollIntoView({ block: "center" });
+    } catch (err) {
+      mutatHibat("Nem sikerült elküldeni a jelentkezést. Ellenőrizd az internetkapcsolatot, és próbáld újra, vagy írj Instagramon.");
+      gomb.disabled = false;
+      gomb.textContent = "Jelentkezem";
+    }
+  });
+</script>
+</body>
+</html>
